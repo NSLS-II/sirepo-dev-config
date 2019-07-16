@@ -1,0 +1,14 @@
+[Unit]
+Description=RabbitMQ service for Sirepo
+After=docker.service
+Requires=docker.service
+
+[Service]
+User=vagrant
+Group=expdev
+TimeoutStartSec=0
+# Restart=always
+ExecStart=/bin/bash /home/expdev/bin/rabbitmq.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=uwsgi service for Sirepo
+After=celery.service
+
+[Service]
+User=vagrant
+Group=expdev
+TimeoutStartSec=0
+# Restart=always
+WorkingDirectory=/home/expdev/sirepo
+ExecStart=/bin/bash /home/expdev/bin/uwsgi.sh
+
+[Install]
+WantedBy=multi-user.target
