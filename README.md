@@ -44,3 +44,4 @@ sudo systemctl stop sirepo@nginx_proxy sirepo@uwsgi sirepo@celery sirepo@rabbitm
 Useful pieces are taken from:
 - https://stackoverflow.com/a/48232848/4143531
 - https://stackoverflow.com/a/53928427/4143531
+- https://stackoverflow.com/a/43830129/4143531
