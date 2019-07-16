@@ -5,7 +5,7 @@ After=docker.service
 [Service]
 User=vagrant
 Group=expdev
-SyslogIdentifier=sirepo
+SyslogIdentifier=sirepo-%i
 TimeoutStartSec=0
 # Restart=always
 WorkingDirectory=/home/expdev/sirepo
