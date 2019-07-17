@@ -5,7 +5,7 @@
 $ ls -al /etc/systemd/system/sirepo\@.service
 -rw-rw-r-- 2 vagrant expdev 282 Jul 17 00:00 /etc/systemd/system/sirepo@.service
 ```
-(this file is a hard-link to `/home/expdev/sirepo-dev-config/services/sirepo@.service`, the symlink does not work!)
+This file is a hard-link to `/home/expdev/sirepo-dev-config/services/sirepo@.service`, the symlink does not work! See [this thread](https://github.com/systemd/systemd/issues/3010#issuecomment-355438445) for details.
 
 ```bash
 $ ls -la /home/expdev/bin/
