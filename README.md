@@ -3,8 +3,9 @@
 ## Files
 ```bash
 $ ls -al /etc/systemd/system/sirepo\@.service
-lrwxrwxrwx 1 root root 55 Jul 16 02:51 /etc/systemd/system/sirepo@.service -> /home/expdev/sirepo-dev-config/services/sirepo@.service
+-rw-rw-r-- 2 vagrant expdev 282 Jul 17 00:00 /etc/systemd/system/sirepo@.service
 ```
+(this file is a hard-link to `/home/expdev/sirepo-dev-config/services/sirepo@.service`, the symlink does not work!)
 
 ```bash
 $ ls -la /home/expdev/bin/
