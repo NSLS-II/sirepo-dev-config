@@ -26,20 +26,25 @@ This action may be needed in case the `sirepo@.service` file was changed.
 
 ### Start Sirepo services:
 ```bash
-sudo systemctl start sirepo@rabbitmq sirepo@celery sirepo@uwsgi sirepo@nginx_proxy
+sudo systemctl start sirepo@rabbitmq sirepo@celery sirepo@uwsgi sirepo@nginx_proxy sirepo@flower
 ```
 
 ### Check the status of Sirepo services:
 ```bash
-sudo systemctl status sirepo@rabbitmq sirepo@celery sirepo@uwsgi sirepo@nginx_proxy
+sudo systemctl status sirepo@rabbitmq sirepo@celery sirepo@uwsgi sirepo@nginx_proxy sirepo@flower
 ```
 (use `-l` to display full lines)
 
 ### Stop Sirepo services:
 ```bash
-sudo systemctl stop sirepo@nginx_proxy sirepo@uwsgi sirepo@celery sirepo@rabbitmq
+sudo systemctl stop sirepo@flower sirepo@nginx_proxy sirepo@uwsgi sirepo@celery sirepo@rabbitmq
 ```
 (please note the reverse order comparing to the start command above)
+
+### Check the logs:
+```bash
+sudo journalctl -u sirepo@* -xef
+```
 
 ## Credits
 Useful pieces are taken from:
