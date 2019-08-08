@@ -4,12 +4,12 @@ After=docker.service
 
 [Service]
 User=vagrant
-Group=expdev
+Group=vagrant
 SyslogIdentifier=sirepo-%i
 TimeoutStartSec=0
 # Restart=always
-WorkingDirectory=/home/expdev/sirepo
-ExecStart=/bin/bash /home/expdev/bin/sirepo.sh %i
+WorkingDirectory=/home/vagrant/src/sirepo
+ExecStart=/bin/bash /home/vagrant/src/sirepo-dev-config/scripts/sirepo.sh %i
 
 [Install]
 WantedBy=multi-user.target
